@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Routina</string>
+    <string name="image_description">img</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor sem tortor, sed malesuada mi tempor sed. Maecenas sagittis augue est, vel eleifend justo venenatis ut. Suspendisse bibendum tortor ut diam hendrerit, non hendrerit dui pellentesque. Etiam quis nunc euismod, placerat urna sed, placerat lectus. Ut vel laoreet ante. Maecenas dolor elit, dictum id magna eget, eleifend accumsan tellus. Aenean blandit mi et elit interdum fringilla. Aenean vitae dolor ut est bibendum laoreet. Donec lacinia pharetra diam, a bibendum nunc posuere vel. Fusce sagittis dapibus augue, pretium lacinia ipsum malesuada pharetra. Aenean lectus ante, volutpat sed finibus ac, eleifend a nisl. Quisque mattis, tellus sed eleifend tristique, ante dolor imperdiet purus, eu tempor felis tellus lobortis arcu.</string>
+</resources>
