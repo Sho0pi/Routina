@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav">
+
+    <fragment
+        android:id="@+id/RoutineFragment"
+        android:name="com.shoopi.routina.fragments.RoutinesFragment"
+        android:label="Blank"
+        tools:layout="@layout/fragment_routines" />
+
+    <fragment
+        android:id="@+id/AutomationFragment"
+        android:name="com.shoopi.routina.fragments.AutomationFragment"
+        android:label="Blank"
+        tools:layout="@layout/fragment_automation" />
+
+</navigation>
