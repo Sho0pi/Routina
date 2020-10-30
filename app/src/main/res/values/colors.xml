@@ -8,4 +8,97 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="navigation_color">#3700B3</color>
+
+
+    <!--    red-->
+    <color name="fore_red">#f44336</color>
+    <color name="fore_red_dark">#ed4f43</color>
+    <color name="back_red">#ffebee</color>
+    <color name="back_red_dark">#1c0000</color>
+
+    <!--    magenta-->
+    <color name="fore_magenta">#E07A5F</color>
+    <color name="fore_magenta_dark">#d14c23</color>
+    <color name="back_magenta">#fcf1ee</color>
+    <color name="back_magenta_dark">#230c06</color>
+
+    <!--   orange -->
+    <color name="fore_orange">#ac5900</color>
+    <color name="fore_orange_dark">#db892e</color>
+    <color name="back_orange">#fef7e0</color>
+    <color name="back_orange_dark">#140000</color>
+
+    <!--    yellow-->
+    <color name="fore_yellow">#ffd500</color>
+    <color name="fore_yellow_dark">#FDC500</color>
+    <color name="back_yellow">#FFFCEB</color>
+    <color name="back_yellow_dark">#141100</color>
+
+    <!-- green -->
+    <color name="fore_green">#34a853</color>
+    <color name="fore_green_dark">#3db05a</color>
+    <color name="back_green">#e6f4ea</color>
+    <color name="back_green_dark">#001400</color>
+
+    <!--    turquoise-->
+    <color name="fore_turquoise">#72efdd</color>
+    <color name="fore_turquoise_dark">#35e9ce</color>
+    <color name="back_turquoise">#edfdfb</color>
+    <color name="back_turquoise_dark">#021210</color>
+
+    <!--    cyan-->
+    <color name="fore_cyan">#3dbae1</color>
+    <color name="fore_cyan_dark">#60c7e6</color>
+    <color name="back_cyan">#edf9fc</color>
+    <color name="back_cyan_dark">#030F11</color>
+
+    <!--    blue-->
+    <color name="fore_blue">#4285f4</color>
+    <color name="fore_blue_dark">#4689f8</color>
+    <color name="back_blue">#dae8ff</color>
+    <color name="back_blue_dark">#001c32</color>
+
+    <!--    darkblue-->
+    <color name="fore_dark_blue">#004a8f</color>
+    <color name="fore_dark_blue_dark">#C2E1FF</color>
+    <color name="back_dark_blue">#ebf5ff</color>
+    <color name="back_dark_blue_dark">#000A14</color>
+
+    <!--    darkpurple-->
+    <color name="fore_dark_purple">#3f51b5</color>
+    <color name="fore_dark_purple_dark">#8fa1fd</color>
+    <color name="back_dark_purple">#e8eaf6</color>
+    <color name="back_dark_purple_dark">#14141c</color>
+
+    <!--    purple-->
+    <color name="fore_purple">#8b5cd6</color>
+    <color name="fore_purple_dark">#bc47ff</color>
+    <color name="back_purple">#f3effb</color>
+    <color name="back_purple_dark">#1A0029</color>
+
+    <!--    pink-->
+    <color name="fore_pink">#ab47bc</color>
+    <color name="fore_pink_dark">#c560d6</color>
+    <color name="back_pink">#f3e8fd</color>
+    <color name="back_pink_dark">#140022</color>
+
+    <!--    black-->
+    <color name="fore_black">#111111</color>
+    <color name="fore_black_dark">#ffffff</color>
+    <color name="back_black">#f5f5f5</color>
+    <color name="back_black_dark">#141414</color>
+
+    <!--    gray-->
+    <color name="fore_gray">#7A8174</color>
+    <color name="fore_gray_dark">#DCE8D2</color>
+    <color name="back_gray">#E9F6DE</color>
+    <color name="back_gray_dark">#151513</color>
+
+    <!--    brown-->
+    <color name="fore_brown">#A77464</color>
+    <color name="fore_brown_dark">#A77464</color>
+    <color name="back_brown">#FFEBEE</color>
+    <color name="back_brown_dark">#0D0807</color>
+
+
 </resources>

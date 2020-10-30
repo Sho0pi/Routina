@@ -1,14 +1,16 @@
 package com.shoopi.routina.adapters
 
-import android.view.Gravity
+import android.content.res.ColorStateList
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.card.MaterialCardView
 import com.shoopi.routina.R
 import com.shoopi.routina.Routine
 
@@ -18,19 +20,25 @@ class RoutineListAdapter(private val routines: List<Routine>) :
     class RoutineHolder(private var view: View) : RecyclerView.ViewHolder(view),
         View.OnClickListener {
 
-        private val routineName: TextView
-        private val routineDescription: TextView
-        private val routineIcon: ImageView
-        private val routineCardBackground: LinearLayout
-        private val routineSettingsButton: MaterialButton
+        private val routineName: TextView = view.findViewById(R.id.routine_name)
+        private val routineDescription: TextView = view.findViewById(R.id.routine_description)
+        private val routineIcon: ImageView = view.findViewById(R.id.routine_icon)
+        private val routineCardBackground: LinearLayout = view.findViewById(R.id.card_background)
+        private val routineSettingsButton: MaterialButton =
+            view.findViewById(R.id.routine_settings_button)
+        private val routineCard: MaterialCardView = view.findViewById(R.id.routine_card)
 
         init {
-            view.setOnClickListener(this)
-            routineName = view.findViewById(R.id.routine_name)
-            routineDescription = view.findViewById(R.id.routine_description)
-            routineIcon = view.findViewById(R.id.routine_icon)
-            routineCardBackground = view.findViewById(R.id.card_background)
-            routineSettingsButton = view.findViewById(R.id.routine_settings_button)
+            routineCard.setOnClickListener(this)
+            routineCard.setOnLongClickListener {
+                routineCard.isChecked = !routineCard.isChecked
+                routineSettingsButton.visibility =
+                    if (routineCard.isChecked) MaterialButton.INVISIBLE else MaterialButton.VISIBLE
+                true
+            }
+            routineSettingsButton.setOnClickListener {
+                Toast.makeText(view.context, "settings", Toast.LENGTH_LONG).show()
+            }
         }
 
         override fun onClick(v: View) {
@@ -41,7 +49,22 @@ class RoutineListAdapter(private val routines: List<Routine>) :
             routineName.text = routine.name
             routineDescription.text = routine.description
             routineIcon.setDrawable(routine.icon, view.context)
-            routineCardBackground.setGradient(routine.gradient)
+
+            setBackground(routine.background)
+            setForeground(routine.foreground)
+        }
+
+        private fun setForeground(color: Int) {
+            @ColorInt val colorInt = view.context.getColorFromAttr(color)
+            routineSettingsButton.iconTint = ColorStateList.valueOf(colorInt)
+            routineName.setTextColor(colorInt)
+            routineDescription.setTextColor(colorInt)
+            routineIcon.imageTintList = ColorStateList.valueOf(colorInt)
+        }
+
+        private fun setBackground(color: Int) {
+            routineCard.backgroundTintList =
+                ColorStateList.valueOf(view.context.getColorFromAttr(color))
         }
 
     }

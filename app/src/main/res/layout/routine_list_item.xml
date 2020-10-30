@@ -1,23 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackgroundBorderless"
     android:gravity="center"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/routine_card"
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:layout_margin="8dp"
-        app:cardCornerRadius="10dp">
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:backgroundTint="?attr/backGreen"
+        android:elevation="2dp"
+        app:cardCornerRadius="10dp"
+        app:rippleColor="@color/black"
+        app:checkedIconTint="?android:attr/colorBackground">
 
         <LinearLayout
             android:id="@+id/card_background"
+            android:background="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_red"
             android:orientation="vertical">
 
             <LinearLayout
@@ -25,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="5dp"
                 android:layout_marginBottom="5dp"
                 android:orientation="horizontal">
 
@@ -39,8 +49,9 @@
                         android:layout_height="50dp"
                         android:layout_alignParentStart="true"
                         android:layout_marginTop="5dp"
+                        android:contentDescription="@string/image_description"
                         android:src="@drawable/ic_android"
-                        app:tint="@color/white" />
+                        app:tint="?attr/foreGreen" />
 
                 </RelativeLayout>
 
@@ -63,7 +74,8 @@
                         app:icon="@drawable/ic_settings_tone"
                         app:iconGravity="textStart"
                         app:iconPadding="0dp"
-                        app:iconSize="25sp" />
+                        app:iconSize="25sp"
+                        app:iconTint="?android:attr/backgroundTint" />
 
                 </RelativeLayout>
 
@@ -84,7 +96,7 @@
                     android:fontFamily="@font/raleway_bold"
                     android:maxLines="1"
                     android:text="@string/lorem_ipsum"
-                    android:textColor="@color/white"
+                    android:textColor="?attr/foreGreen"
                     android:textSize="15sp" />
 
                 <TextView
@@ -95,12 +107,13 @@
                     android:fontFamily="@font/raleway_light"
                     android:maxLines="1"
                     android:text="@string/lorem_ipsum"
-                    android:textColor="@color/white"
-                    android:textSize="10sp" />
+                    android:textColor="?attr/foreGreen"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp" />
             </LinearLayout>
 
         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

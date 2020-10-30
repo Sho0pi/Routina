@@ -12,5 +12,55 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+
+        <!--        colors-->
+        <!--    red-->
+        <item name="foreRed">@color/fore_red</item>
+        <item name="backRed">@color/back_red</item>
+        <!--    magenta-->
+        <item name="foreMagenta">@color/fore_magenta</item>
+        <item name="backMagenta">@color/back_magenta</item>
+        <!--   orange -->
+        <item name="foreOrange">@color/fore_orange</item>
+        <item name="backOrange">@color/back_orange</item>
+        <!--    yellow-->
+        <item name="foreYellow">@color/fore_yellow</item>
+        <item name="backYellow">@color/back_yellow</item>
+        <!--    green-->
+        <item name="foreGreen">@color/fore_green</item>
+        <item name="backGreen">@color/back_green</item>
+        <!--    turquoise-->
+        <item name="foreTurquoise">@color/fore_turquoise</item>
+        <item name="backTurquoise">@color/back_turquoise</item>
+        <!--    cyan-->
+        <item name="foreCyan">@color/fore_cyan</item>
+        <item name="backCyan">@color/back_cyan</item>
+        <!--    blue-->
+        <item name="foreBlue">@color/fore_blue</item>
+        <item name="backBlue">@color/back_blue</item>
+        <!--    darkblue-->
+        <item name="foreDarkBlue">@color/fore_dark_blue</item>
+        <item name="backDarkBlue">@color/back_dark_blue</item>
+        <!--    darkpurple-->
+        <item name="foreDarkPurple">@color/fore_dark_purple</item>
+        <item name="backDarkPurple">@color/back_dark_purple</item>
+        <!--    purple-->
+        <item name="forePurple">@color/fore_purple</item>
+        <item name="backPurple">@color/back_purple</item>
+        <!--    pink-->
+        <item name="forePink">@color/fore_pink</item>
+        <item name="backPink">@color/back_pink</item>
+        <!--    black-->
+        <item name="foreBlack">@color/fore_black</item>
+        <item name="backBlack">@color/back_black</item>
+        <!--    gray-->
+        <item name="foreGray">@color/fore_gray</item>
+        <item name="backGray">@color/back_gray</item>
+        <!--    brown-->
+        <item name="foreBrown">@color/fore_brown</item>
+        <item name="backBrown">@color/back_brown</item>
+        <!--        -->
+
+
     </style>
 </resources>
