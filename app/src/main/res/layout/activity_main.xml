@@ -7,38 +7,27 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.core.widget.NestedScrollView
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="?android:attr/actionBarSize"
-        android:background="?android:attr/colorBackground">
+        android:layout_height="match_parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/routineList"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginRight="4dp"
-                android:layout_marginLeft="4dp"
-                android:clipToPadding="false"
-                android:overScrollMode="never" />
-
-        </LinearLayout>
-
-
-    </androidx.core.widget.NestedScrollView>
-
-    <TextView
-        android:layout_width="wrap_content"
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_corners"
+        android:elevation="6dp"
+        app:abb_animationInterpolator="@android:anim/overshoot_interpolator"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorMargin="40dp"
+        app:abb_selectedIndex="0"
+        app:abb_selectedTabType="icon"
+        app:abb_tabs="@menu/bottom_navigation_menu"
+        app:abb_textAppearance="@style/NavigationText" />
 
 </RelativeLayout>
