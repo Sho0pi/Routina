@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="colorCardBackground" format="color" />
+
+    <!--    red-->
+    <attr name="foreRed" format="color" />
+    <attr name="backRed" format="color" />
+    <!--    magenta-->
+    <attr name="foreMagenta" format="color" />
+    <attr name="backMagenta" format="color" />
+    <!--   orange -->
+    <attr name="foreOrange" format="color" />
+    <attr name="backOrange" format="color" />
+    <!--    yellow-->
+    <attr name="foreYellow" format="color" />
+    <attr name="backYellow" format="color" />
+    <!--    green-->
+    <attr name="foreGreen" format="color" />
+    <attr name="backGreen" format="color" />
+    <!--    turquoise-->
+    <attr name="foreTurquoise" format="color" />
+    <attr name="backTurquoise" format="color" />
+    <!--    cyan-->
+    <attr name="foreCyan" format="color" />
+    <attr name="backCyan" format="color" />
+    <!--    blue-->
+    <attr name="foreBlue" format="color" />
+    <attr name="backBlue" format="color" />
+    <!--    darkblue-->
+    <attr name="foreDarkBlue" format="color" />
+    <attr name="backDarkBlue" format="color" />
+    <!--    darkpurple-->
+    <attr name="foreDarkPurple" format="color" />
+    <attr name="backDarkPurple" format="color" />
+    <!--    purple-->
+    <attr name="forePurple" format="color" />
+    <attr name="backPurple" format="color" />
+    <!--    pink-->
+    <attr name="forePink" format="color" />
+    <attr name="backPink" format="color" />
+    <!--    black-->
+    <attr name="foreBlack" format="color" />
+    <attr name="backBlack" format="color" />
+    <!--    gray-->
+    <attr name="foreGray" format="color" />
+    <attr name="backGray" format="color" />
+    <!--    brown-->
+    <attr name="foreBrown" format="color" />
+    <attr name="backBrown" format="color" />
+
+</resources>

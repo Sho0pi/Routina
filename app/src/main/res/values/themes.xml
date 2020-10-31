@@ -13,6 +13,8 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
 
+        <item name="colorCardBackground">@color/card_background</item>
+
         <!--        colors-->
         <!--    red-->
         <item name="foreRed">@color/fore_red</item>
