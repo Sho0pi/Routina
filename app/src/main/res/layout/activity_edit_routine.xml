@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activities.EditRoutineActivity">
 
     <include
         android:id="@+id/toolbar"
@@ -14,7 +13,8 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar" />
 
     <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/bottom_nav"
@@ -30,7 +30,7 @@
         app:abb_indicatorMargin="40dp"
         app:abb_selectedIndex="0"
         app:abb_selectedTabType="icon"
-        app:abb_tabs="@menu/bottom_navigation_menu"
+        app:abb_tabs="@menu/edit_routine_bottom_navigation_menu"
         app:abb_textAppearance="@style/NavigationText" />
 
 </RelativeLayout>

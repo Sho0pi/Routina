@@ -44,13 +44,13 @@
                     android:layout_height="wrap_content">
 
                     <net.steamcrafted.materialiconlib.MaterialIconView
-                        android:layout_width="50dp"
                         android:id="@+id/routine_icon"
+                        android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_alignParentStart="true"
                         android:layout_marginTop="5dp"
                         app:materialIcon="android_head"
-                        app:materialIconColor="?attr/foreGreen"/>
+                        app:materialIconColor="?attr/foreGreen" />
 
                 </RelativeLayout>
 
@@ -60,22 +60,22 @@
                     android:orientation="vertical"
                     tools:ignore="UselessLeaf">
 
-<!--                    <com.google.android.material.button.MaterialButton-->
-<!--                        android:id="@+id/routine_settings_button"-->
-<!--                        android:layout_width="30dp"-->
-<!--                        android:layout_height="30dp"-->
-<!--                        android:layout_alignParentEnd="true"-->
-<!--                        android:background="@android:color/transparent"-->
-<!--                        android:insetLeft="0dp"-->
-<!--                        android:insetTop="0dp"-->
-<!--                        android:insetRight="0dp"-->
-<!--                        android:insetBottom="0dp"-->
-<!--                        app:cornerRadius="100dp"-->
-<!--                        app:icon="@drawable/ic_settings_tone"-->
-<!--                        app:iconGravity="textStart"-->
-<!--                        app:iconPadding="0dp"-->
-<!--                        app:iconSize="25sp"-->
-<!--                        app:iconTint="?android:attr/backgroundTint" />-->
+                    <!--                    <com.google.android.material.button.MaterialButton-->
+                    <!--                        android:id="@+id/routine_settings_button"-->
+                    <!--                        android:layout_width="30dp"-->
+                    <!--                        android:layout_height="30dp"-->
+                    <!--                        android:layout_alignParentEnd="true"-->
+                    <!--                        android:background="@android:color/transparent"-->
+                    <!--                        android:insetLeft="0dp"-->
+                    <!--                        android:insetTop="0dp"-->
+                    <!--                        android:insetRight="0dp"-->
+                    <!--                        android:insetBottom="0dp"-->
+                    <!--                        app:cornerRadius="100dp"-->
+                    <!--                        app:icon="@drawable/ic_settings_tone"-->
+                    <!--                        app:iconGravity="textStart"-->
+                    <!--                        app:iconPadding="0dp"-->
+                    <!--                        app:iconSize="25sp"-->
+                    <!--                        app:iconTint="?android:attr/backgroundTint" />-->
 
                 </RelativeLayout>
 

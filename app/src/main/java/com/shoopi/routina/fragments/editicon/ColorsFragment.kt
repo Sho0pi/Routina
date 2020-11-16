@@ -8,7 +8,6 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.shoopi.routina.Color
 import com.shoopi.routina.R
 import com.shoopi.routina.SharedColor
 import com.shoopi.routina.adapters.ColorListAdapter
