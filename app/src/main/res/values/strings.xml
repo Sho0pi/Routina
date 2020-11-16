@@ -6,4 +6,10 @@
     <string name="automation">Automation</string>
     <string name="media">Media</string>
     <string name="coming_soon">Coming Soon</string>
+    <string name="dialog_set_text_title">Set Text</string>
+    <string name="dialog_enter_hint">Enter</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_done">Done</string>
+    <string name="dialog_website_link_hint">Website Link</string>
+    <string name="dialog_open_url_title">Open URL</string>
 </resources>
