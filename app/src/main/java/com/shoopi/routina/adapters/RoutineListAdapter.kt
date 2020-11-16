@@ -3,16 +3,15 @@ package com.shoopi.routina.adapters
 import android.content.res.ColorStateList
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.ColorInt
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
 import com.shoopi.routina.R
 import com.shoopi.routina.Routine
+import net.steamcrafted.materialiconlib.MaterialIconView
 
 class RoutineListAdapter(private val routines: List<Routine>) :
     RecyclerView.Adapter<RoutineListAdapter.RoutineHolder>() {
@@ -22,9 +21,10 @@ class RoutineListAdapter(private val routines: List<Routine>) :
 
         private val routineName: TextView = view.findViewById(R.id.routine_name)
         private val routineDescription: TextView = view.findViewById(R.id.routine_description)
-        private val routineIcon: ImageView = view.findViewById(R.id.routine_icon)
+        private val routineIcon: MaterialIconView = view.findViewById(R.id.routine_icon)
         private val routineCardBackground: LinearLayout = view.findViewById(R.id.card_background)
-//        private val routineSettingsButton: MaterialButton =
+
+        //        private val routineSettingsButton: MaterialButton =
 //            view.findViewById(R.id.routine_settings_button)
         private val routineCard: MaterialCardView = view.findViewById(R.id.routine_card)
 
@@ -48,7 +48,7 @@ class RoutineListAdapter(private val routines: List<Routine>) :
         fun bind(routine: Routine) {
             routineName.text = routine.name
             routineDescription.text = routine.description
-            routineIcon.setDrawable(routine.icon, view.context)
+            routineIcon.setIcon(routine.icon)
 
             setBackground(routine.background)
             setForeground(routine.foreground)
@@ -59,7 +59,9 @@ class RoutineListAdapter(private val routines: List<Routine>) :
 //            routineSettingsButton.iconTint = ColorStateList.valueOf(colorInt)
             routineName.setTextColor(colorInt)
             routineDescription.setTextColor(colorInt)
-            routineIcon.imageTintList = ColorStateList.valueOf(colorInt)
+            routineIcon.setColor(
+                colorInt
+            )
         }
 
         private fun setBackground(color: Int) {

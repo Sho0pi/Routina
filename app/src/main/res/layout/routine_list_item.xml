@@ -43,15 +43,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/routine_icon"
+                    <net.steamcrafted.materialiconlib.MaterialIconView
                         android:layout_width="50dp"
+                        android:id="@+id/routine_icon"
                         android:layout_height="50dp"
                         android:layout_alignParentStart="true"
                         android:layout_marginTop="5dp"
-                        android:contentDescription="@string/image_description"
-                        android:src="@drawable/ic_android"
-                        app:tint="?attr/foreGreen" />
+                        app:materialIcon="android_head"
+                        app:materialIconColor="?attr/foreGreen"/>
 
                 </RelativeLayout>
 
