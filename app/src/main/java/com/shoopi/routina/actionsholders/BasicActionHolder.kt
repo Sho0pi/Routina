@@ -1,35 +1,60 @@
 package com.shoopi.routina.actionsholders
 
-import com.shoopi.routina.actions.ActionFactory
+import android.content.Context
+import com.shoopi.routina.actions.ActionGenerator
+import com.shoopi.routina.actions.EditableActionGenerator
+import com.shoopi.routina.actions.utils.EmptyActionGenerator
 
-class BasicActionHolder() {
-    private var actionFactories: MutableList<ActionFactory<*>> = ArrayList()
+class BasicActionHolder(private val context: Context) {
+    private var actionGenerators: MutableList<ActionGenerator<*>> = ArrayList()
 
-    fun execute(): Any? {
-        var previousResult: Any? = null
-        actionFactories.forEach {
-            val action = it.create(previousResult)
+    init {
+        actionGenerators.add(EmptyActionGenerator())
+    }
+
+    fun execute(): Any {
+        var previousResult: Any = Unit
+        actionGenerators.forEach {
+            val action = it.generate(previousResult)
             previousResult = action.execute()
         }
         return previousResult
     }
 
-    fun add(actionFactory: ActionFactory<*>): Boolean {
-        return actionFactories.add(actionFactory)
+    fun add(actionGenerator: ActionGenerator<*>): Boolean {
+        if (actionGenerator is EditableActionGenerator) {
+            if (actionGenerator.isReceiver) {
+                if (!actionGenerators.last().isSupplier) {
+                    actionGenerator.edit(context)
+                }
+            } else {
+                actionGenerator.edit(context)
+            }
+        }
+        return actionGenerators.add(actionGenerator)
     }
 
-    fun add(position: Int, actionFactory: ActionFactory<*>) {
-        return actionFactories.add(position, actionFactory)
+    fun add(position: Int, actionGenerator: ActionGenerator<*>) {
+        if (actionGenerator is EditableActionGenerator) {
+            if (actionGenerator.isReceiver) {
+                if (!actionGenerators.last().isSupplier) {
+                    actionGenerator.edit(context)
+                }
+            } else {
+                actionGenerator.edit(context)
+            }
+        }
+        return actionGenerators.add(position, actionGenerator)
     }
 
-    fun remove(actionFactory: ActionFactory<*>): Boolean {
-        return actionFactories.remove(actionFactory)
+    fun remove(actionGenerator: ActionGenerator<*>): Boolean {
+        return actionGenerators.remove(actionGenerator)
     }
 
-    fun removeAt(index: Int): ActionFactory<*> {
-        return actionFactories.removeAt(index)
+    fun removeAt(index: Int): ActionGenerator<*> {
+        return actionGenerators.removeAt(index)
     }
 
-    fun size() = actionFactories.size
+    fun size() = actionGenerators.size
 
 }

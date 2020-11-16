@@ -2,11 +2,11 @@ package com.shoopi.routina.actions.device
 
 import android.content.Context
 import com.shoopi.routina.R
-import com.shoopi.routina.actions.ActionFactory
+import com.shoopi.routina.actions.ActionGenerator
 
-class GetBatteryLevelActionFactory(private val context: Context) :
-    ActionFactory<Int> {
-    override fun create(from: Any?): GetBatteryLevelAction {
+class GetBatteryLevelActionGenerator(private val context: Context) :
+    ActionGenerator<Int> {
+    override fun generate(from: Any): GetBatteryLevelAction {
         return GetBatteryLevelAction(context)
     }
 
@@ -18,4 +18,8 @@ class GetBatteryLevelActionFactory(private val context: Context) :
         get() = R.drawable.ic_battery
     override val gradient: Int
         get() = R.drawable.gradient_green
+    override val isReceiver: Boolean
+        get() = false
+    override val isSupplier: Boolean
+        get() = true
 }
