@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.card.MaterialCardView
 import com.shoopi.routina.R
 import com.shoopi.routina.actions.utils.SetTextActionGenerator
+import com.shoopi.routina.actions.utils.ShowToastActionGenerator
 import com.shoopi.routina.actions.web.OpenUrlAction
 import com.shoopi.routina.actions.web.OpenUrlActionGenerator
 import com.shoopi.routina.actionsholders.BasicActionHolder
@@ -35,12 +36,9 @@ class EditIconActivity : AppCompatActivity() {
 
         val materialCardView = findViewById<MaterialCardView>(R.id.icon_background)
         materialCardView.setOnClickListener {
-            actionHolder.add(SetTextActionGenerator())
+            actionHolder.add(ShowToastActionGenerator(this))
             materialCardView.setOnClickListener {
-                actionHolder.add(OpenUrlActionGenerator(this))
-                materialCardView.setOnClickListener {
                     actionHolder.execute()
-                }
             }
         }
 

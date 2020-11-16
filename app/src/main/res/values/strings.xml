@@ -12,4 +12,7 @@
     <string name="button_done">Done</string>
     <string name="dialog_website_link_hint">Website Link</string>
     <string name="dialog_open_url_title">Open URL</string>
+    <string name="dialog_show_toast_title">Show Toast</string>
+    <string name="text_hint">Text</string>
+    <string name="long_duration">Long Duration</string>
 </resources>

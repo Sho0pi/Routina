@@ -63,6 +63,7 @@
         <item name="backBrown">@color/back_brown_dark</item>
         <!--        -->
 
+        <item name="switchStyle">@style/Widget.App.Switch</item>
 
     </style>
 </resources>

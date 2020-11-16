@@ -7,4 +7,13 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+        <item name="colorOnSurface">@color/purple_700</item>
+        <item name="colorSecondary">@color/purple_200</item>
+    </style>
+
 </resources>
