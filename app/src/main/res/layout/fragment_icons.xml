@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.main.RoutinesFragment">
+    tools:context=".fragments.editicon.IconsFragment">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -17,13 +17,15 @@
             android:orientation="vertical">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/routineList"
+                android:id="@+id/icon_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
                 android:clipToPadding="false"
                 android:overScrollMode="never"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
                 android:scrollbars="vertical" />
 
             <LinearLayout
@@ -32,6 +34,6 @@
                 android:layout_marginBottom="100dp"
                 tools:ignore="UselessLeaf" />
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
+
 </FrameLayout>

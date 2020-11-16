@@ -24,21 +24,21 @@ class RoutineListAdapter(private val routines: List<Routine>) :
         private val routineDescription: TextView = view.findViewById(R.id.routine_description)
         private val routineIcon: ImageView = view.findViewById(R.id.routine_icon)
         private val routineCardBackground: LinearLayout = view.findViewById(R.id.card_background)
-        private val routineSettingsButton: MaterialButton =
-            view.findViewById(R.id.routine_settings_button)
+//        private val routineSettingsButton: MaterialButton =
+//            view.findViewById(R.id.routine_settings_button)
         private val routineCard: MaterialCardView = view.findViewById(R.id.routine_card)
 
         init {
             routineCard.setOnClickListener(this)
             routineCard.setOnLongClickListener {
                 routineCard.isChecked = !routineCard.isChecked
-                routineSettingsButton.visibility =
-                    if (routineCard.isChecked) MaterialButton.INVISIBLE else MaterialButton.VISIBLE
+//                routineSettingsButton.visibility =
+//                    if (routineCard.isChecked) MaterialButton.INVISIBLE else MaterialButton.VISIBLE
                 true
             }
-            routineSettingsButton.setOnClickListener {
-                Toast.makeText(view.context, "settings", Toast.LENGTH_LONG).show()
-            }
+//            routineSettingsButton.setOnClickListener {
+//                Toast.makeText(view.context, "settings", Toast.LENGTH_LONG).show()
+//            }
         }
 
         override fun onClick(v: View) {
@@ -56,7 +56,7 @@ class RoutineListAdapter(private val routines: List<Routine>) :
 
         private fun setForeground(color: Int) {
             @ColorInt val colorInt = view.context.getColorFromAttr(color)
-            routineSettingsButton.iconTint = ColorStateList.valueOf(colorInt)
+//            routineSettingsButton.iconTint = ColorStateList.valueOf(colorInt)
             routineName.setTextColor(colorInt)
             routineDescription.setTextColor(colorInt)
             routineIcon.imageTintList = ColorStateList.valueOf(colorInt)

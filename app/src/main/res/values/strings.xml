@@ -15,4 +15,6 @@
     <string name="dialog_show_toast_title">Show Toast</string>
     <string name="text_hint">Text</string>
     <string name="long_duration">Long Duration</string>
+    <string name="style">Style</string>
+    <string name="icon">Icon</string>
 </resources>

@@ -3,12 +3,12 @@ package com.shoopi.routina.adapters
 import android.content.res.ColorStateList
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.shoopi.routina.Color
 import com.shoopi.routina.R
+import net.steamcrafted.materialiconlib.MaterialIconView
 
 class ColorListAdapter(private val colors: List<Color>, private val iconView: LinearLayout) :
 
@@ -42,13 +42,12 @@ class ColorListAdapter(private val colors: List<Color>, private val iconView: Li
 
         private fun setColor(iconView: LinearLayout) {
             val iconBackground = iconView.findViewById<MaterialCardView>(R.id.icon_background)
-            val icon = iconView.findViewById<ImageView>(R.id.icon)
+            val icon = iconView.findViewById<MaterialIconView>(R.id.icon)
 
             iconBackground.backgroundTintList =
                 ColorStateList.valueOf(view.context.getColorFromAttr(color.background))
 
-            icon.imageTintList =
-                ColorStateList.valueOf(view.context.getColorFromAttr(color.foreground))
+            icon.setColor(view.context.getColorFromAttr(color.foreground))
         }
 
         override fun onClick(v: View) {

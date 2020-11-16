@@ -1,4 +1,4 @@
-package com.shoopi.routina.fragments
+package com.shoopi.routina.fragments.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -16,12 +16,6 @@ class RoutinesFragment : Fragment() {
 
     private lateinit var gridLayoutManager: GridLayoutManager
     private lateinit var adapter: RoutineListAdapter
-    private var routines: List<Routine> = ArrayList()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

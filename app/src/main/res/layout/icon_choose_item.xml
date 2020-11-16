@@ -7,16 +7,23 @@
     android:orientation="vertical">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/color_view"
+        android:id="@+id/icon_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_centerInParent="true"
         android:layout_margin="4dp"
-        android:backgroundTint="?attr/foreRed"
         android:clickable="true"
         android:elevation="0dp"
         android:focusable="true"
-        app:cardCornerRadius="45dp" />
+        app:cardCornerRadius="45dp">
 
+        <net.steamcrafted.materialiconlib.MaterialIconView
+            android:id="@+id/icon_button_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            app:materialIcon="shape"
+            app:materialIconColor="?android:attr/textColorHint" />
 
+    </com.google.android.material.card.MaterialCardView>
 </RelativeLayout>

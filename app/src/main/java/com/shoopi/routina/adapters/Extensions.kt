@@ -1,7 +1,6 @@
 package com.shoopi.routina.adapters
 
 import android.content.Context
-import android.content.res.ColorStateList
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
@@ -12,8 +11,6 @@ import androidx.annotation.ColorInt
 import androidx.annotation.DrawableRes
 import androidx.annotation.LayoutRes
 import androidx.core.content.res.ResourcesCompat
-import com.google.android.material.card.MaterialCardView
-import com.shoopi.routina.Color
 
 fun ViewGroup.inflate(@LayoutRes layoutRes: Int, attachToBoot: Boolean = false): View {
     return LayoutInflater.from(context).inflate(layoutRes, this, attachToBoot)

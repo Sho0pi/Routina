@@ -30,15 +30,15 @@
                 android:backgroundTint="?attr/backGreen"
                 app:cardCornerRadius="30dp">
 
-                <ImageView
+                <net.steamcrafted.materialiconlib.MaterialIconView
                     android:id="@+id/icon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
-                    android:contentDescription="@string/image_description"
                     android:padding="20dp"
-                    android:src="@drawable/ic_people"
-                    app:tint="?attr/foreGreen" />
+                    app:materialIcon="gmail"
+                    app:materialIconColor="?attr/foreGreen" />
+
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -49,24 +49,29 @@
     </LinearLayout>
 
 
-    <LinearLayout
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/icon_view">
+        android:layout_above="@id/bottom_nav"
+        android:layout_below="@id/icon_view" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/color_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp"
-            android:clipToPadding="true"
-            android:overScrollMode="never"
-            android:paddingStart="30dp"
-            android:paddingEnd="30dp"
-            android:scrollbars="vertical" />
-
-    </LinearLayout>
+    <nl.joery.animatedbottombar.AnimatedBottomBar
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="30dp"
+        android:background="@drawable/round_corners"
+        android:elevation="6dp"
+        app:abb_animationInterpolator="@android:anim/overshoot_interpolator"
+        app:abb_indicatorAppearance="round"
+        app:abb_indicatorMargin="40dp"
+        app:abb_selectedIndex="0"
+        app:abb_selectedTabType="icon"
+        app:abb_tabs="@menu/edit_icon_bottom_navigation_menu"
+        app:abb_textAppearance="@style/NavigationText" />
 
 
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.shoopi.routina.fragments
+package com.shoopi.routina.fragments.main
 
 import android.os.Bundle
 import android.view.LayoutInflater

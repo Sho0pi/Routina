@@ -3,8 +3,8 @@ package com.shoopi.routina
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.shoopi.routina.adapters.SlidePageAdapter
-import com.shoopi.routina.fragments.AutomationFragment
-import com.shoopi.routina.fragments.RoutinesFragment
+import com.shoopi.routina.fragments.main.AutomationFragment
+import com.shoopi.routina.fragments.main.RoutinesFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
