@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.shoopi.routina.R
 import com.shoopi.routina.adapters.ColorListAdapter
 import com.shoopi.routina.colors
+import com.shoopi.routina.utils.GridSpacingItemDecoration
 
 class ColorsFragment() : Fragment() {
 
@@ -27,8 +28,11 @@ class ColorsFragment() : Fragment() {
 
         val colorList = view.findViewById<RecyclerView>(R.id.color_list)
 
+        val spanCount = 5
+        val spacing = 50
         gridLayoutManager = GridLayoutManager(this.context, 5)
         colorList.layoutManager = gridLayoutManager
+        colorList.addItemDecoration(GridSpacingItemDecoration(spanCount, spacing, true))
         adapter = ColorListAdapter(colors(), iconView)
         colorList.adapter = adapter
         adapter.notifyDataSetChanged()

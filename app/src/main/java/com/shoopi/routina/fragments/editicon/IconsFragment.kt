@@ -27,7 +27,7 @@ class IconsFragment : Fragment() {
 
         val iconList = view.findViewById<RecyclerView>(R.id.icon_list)
 
-        gridLayoutManager = GridLayoutManager(this.context, 5)
+        gridLayoutManager = GridLayoutManager(this.context, 8)
         iconList.layoutManager = gridLayoutManager
         adapter = IconListAdapter(icons(), iconView)
         iconList.adapter = adapter
@@ -50,7 +50,15 @@ class IconsFragment : Fragment() {
             MaterialDrawableBuilder.IconValue.POPCORN,
             MaterialDrawableBuilder.IconValue.GMAIL,
             MaterialDrawableBuilder.IconValue.PALETTE,
-            MaterialDrawableBuilder.IconValue.BRUSH
+            MaterialDrawableBuilder.IconValue.BRUSH,
+            MaterialDrawableBuilder.IconValue.STEAM,
+            MaterialDrawableBuilder.IconValue.APPLE,
+            MaterialDrawableBuilder.IconValue.APPLE_IOS,
+            MaterialDrawableBuilder.IconValue.BABY,
+            MaterialDrawableBuilder.IconValue.BANK,
+            MaterialDrawableBuilder.IconValue.DISK,
+            MaterialDrawableBuilder.IconValue.MUSIC,
+            MaterialDrawableBuilder.IconValue.MUSHROOM
         )
     }
 
