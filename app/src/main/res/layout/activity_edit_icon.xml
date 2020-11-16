@@ -6,6 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".activities.EditIconActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <LinearLayout
         android:id="@+id/icon_view"
         android:layout_width="match_parent"

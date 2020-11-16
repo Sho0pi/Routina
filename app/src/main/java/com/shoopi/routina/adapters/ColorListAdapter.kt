@@ -8,12 +8,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.shoopi.routina.Color
 import com.shoopi.routina.R
+import com.shoopi.routina.SharedColor
 import net.steamcrafted.materialiconlib.MaterialIconView
 
-class ColorListAdapter(private val colors: List<Color>, private val iconView: LinearLayout) :
-
+class ColorListAdapter(
+    private val colors: List<Color>,
+    private val iconView: LinearLayout,
+    private var iconColor: SharedColor
+) :
     RecyclerView.Adapter<ColorListAdapter.ColorHolder>() {
-    class ColorHolder(private var view: View, private val iconView: LinearLayout) :
+    class ColorHolder(
+        private var view: View,
+        private val iconView: LinearLayout,
+        private var iconColor: SharedColor
+    ) :
         RecyclerView.ViewHolder(view),
         View.OnClickListener {
 
@@ -53,12 +61,13 @@ class ColorListAdapter(private val colors: List<Color>, private val iconView: Li
         override fun onClick(v: View) {
             check()
             setColor(iconView)
+            iconColor.color = color
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorHolder {
         val inflatedView = parent.inflate(R.layout.color_choose_item)
-        return ColorHolder(inflatedView, iconView)
+        return ColorHolder(inflatedView, iconView, iconColor)
     }
 
     override fun onBindViewHolder(holder: ColorHolder, position: Int) {

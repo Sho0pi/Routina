@@ -1,26 +1,28 @@
 package com.shoopi.routina
 
-data class Color(
+enum class Color(
     val foreground: Int,
     val background: Int
-)
+) {
+    RED(R.attr.foreRed, R.attr.backRed),
+    MAGENTA(R.attr.foreMagenta, R.attr.backMagenta),
+    ORANGE(R.attr.foreOrange, R.attr.backOrange),
+    YELLOW(R.attr.foreYellow, R.attr.backYellow),
+    GREEN(R.attr.foreGreen, R.attr.backGreen),
+    TURQUOISE(R.attr.foreTurquoise, R.attr.backTurquoise),
+    CYAN(R.attr.foreCyan, R.attr.backCyan),
+    BLUE(R.attr.foreBlue, R.attr.backBlue),
+    DARK_BLUE(R.attr.foreDarkBlue, R.attr.backDarkBlue),
+    DARK_PURPLE(R.attr.foreDarkPurple, R.attr.backDarkPurple),
+    PURPLE(R.attr.forePurple, R.attr.backPurple),
+    PINK(R.attr.forePink, R.attr.backPink),
+    BLACK(R.attr.foreBlack, R.attr.backBlack),
+    GRAY(R.attr.foreGray, R.attr.backGray),
+    BROWN(R.attr.foreBrown, R.attr.backBrown);
+}
 
 fun colors(): List<Color> {
-    return listOf(
-        Color(R.attr.foreRed, R.attr.backRed),
-        Color(R.attr.foreMagenta, R.attr.backMagenta),
-        Color(R.attr.foreOrange, R.attr.backOrange),
-        Color(R.attr.foreYellow, R.attr.backYellow),
-        Color(R.attr.foreGreen, R.attr.backGreen),
-        Color(R.attr.foreTurquoise, R.attr.backTurquoise),
-        Color(R.attr.foreCyan, R.attr.backCyan),
-        Color(R.attr.foreBlue, R.attr.backBlue),
-        Color(R.attr.foreDarkBlue, R.attr.backDarkBlue),
-        Color(R.attr.foreDarkPurple, R.attr.backDarkPurple),
-        Color(R.attr.forePurple, R.attr.backPurple),
-        Color(R.attr.forePink, R.attr.backPink),
-        Color(R.attr.foreBlack, R.attr.backBlack),
-        Color(R.attr.foreGray, R.attr.backGray),
-        Color(R.attr.foreBrown, R.attr.backBrown)
-    )
+    return Color.values().toList()
 }
+
+data class SharedColor(var color: Color)

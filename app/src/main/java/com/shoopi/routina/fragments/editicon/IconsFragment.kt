@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.shoopi.routina.R
+import com.shoopi.routina.SharedIconValue
 import com.shoopi.routina.adapters.IconListAdapter
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder
 
@@ -17,6 +18,7 @@ class IconsFragment : Fragment() {
     private lateinit var gridLayoutManager: GridLayoutManager
     private lateinit var adapter: IconListAdapter
     private lateinit var iconView: LinearLayout
+    private lateinit var iconValue: SharedIconValue
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,16 +31,17 @@ class IconsFragment : Fragment() {
 
         gridLayoutManager = GridLayoutManager(this.context, 8)
         iconList.layoutManager = gridLayoutManager
-        adapter = IconListAdapter(icons(), iconView)
+        adapter = IconListAdapter(icons(), iconView, iconValue)
         iconList.adapter = adapter
         adapter.notifyDataSetChanged()
 
         return view
     }
 
-    fun newInstance(iconView: LinearLayout): IconsFragment {
+    fun newInstance(iconView: LinearLayout, iconValue: SharedIconValue): IconsFragment {
         val fragment = IconsFragment()
         fragment.iconView = iconView
+        fragment.iconValue = iconValue
         return fragment
     }
 

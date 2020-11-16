@@ -8,7 +8,9 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.shoopi.routina.Color
 import com.shoopi.routina.R
+import com.shoopi.routina.SharedColor
 import com.shoopi.routina.adapters.ColorListAdapter
 import com.shoopi.routina.colors
 import com.shoopi.routina.utils.GridSpacingItemDecoration
@@ -18,6 +20,7 @@ class ColorsFragment() : Fragment() {
     private lateinit var gridLayoutManager: GridLayoutManager
     private lateinit var adapter: ColorListAdapter
     private lateinit var iconView: LinearLayout
+    private lateinit var iconColor: SharedColor
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -33,16 +36,18 @@ class ColorsFragment() : Fragment() {
         gridLayoutManager = GridLayoutManager(this.context, 5)
         colorList.layoutManager = gridLayoutManager
         colorList.addItemDecoration(GridSpacingItemDecoration(spanCount, spacing, true))
-        adapter = ColorListAdapter(colors(), iconView)
+
+        adapter = ColorListAdapter(colors(), iconView, iconColor)
         colorList.adapter = adapter
         adapter.notifyDataSetChanged()
 
         return view
     }
 
-    fun newInstance(iconView: LinearLayout): ColorsFragment {
+    fun newInstance(iconView: LinearLayout, iconColor: SharedColor): ColorsFragment {
         val fragment = ColorsFragment()
         fragment.iconView = iconView
+        fragment.iconColor = iconColor
         return fragment
     }
 
