@@ -3,7 +3,7 @@ package com.shoopi.routina
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder
 
 data class Routine(
-    val name: String,
+    var name: String,
     val description: String,
     var icon: MaterialDrawableBuilder.IconValue,
     var color: Color

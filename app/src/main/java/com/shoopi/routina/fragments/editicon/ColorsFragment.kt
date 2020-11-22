@@ -19,7 +19,7 @@ class ColorsFragment() : Fragment() {
     private lateinit var gridLayoutManager: GridLayoutManager
     private lateinit var adapter: ColorListAdapter
     private lateinit var iconView: LinearLayout
-    private lateinit var iconColor: SharedColor
+    private lateinit var routineColor: SharedColor
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,17 +36,17 @@ class ColorsFragment() : Fragment() {
         colorList.layoutManager = gridLayoutManager
         colorList.addItemDecoration(GridSpacingItemDecoration(spanCount, spacing, true))
 
-        adapter = ColorListAdapter(colors(), iconView, iconColor)
+        adapter = ColorListAdapter(colors(), iconView, routineColor)
         colorList.adapter = adapter
         adapter.notifyDataSetChanged()
 
         return view
     }
 
-    fun newInstance(iconView: LinearLayout, iconColor: SharedColor): ColorsFragment {
+    fun newInstance(iconView: LinearLayout, routineColor: SharedColor): ColorsFragment {
         val fragment = ColorsFragment()
         fragment.iconView = iconView
-        fragment.iconColor = iconColor
+        fragment.routineColor = routineColor
         return fragment
     }
 

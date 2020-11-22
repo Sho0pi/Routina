@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.res.ColorStateList
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.ColorInt
 import androidx.fragment.app.Fragment
@@ -16,6 +15,7 @@ import com.shoopi.routina.IntentConstants
 import com.shoopi.routina.R
 import com.shoopi.routina.Routine
 import com.shoopi.routina.activities.EditIconActivity
+import com.shoopi.routina.activities.EditRoutineActivity
 import com.shoopi.routina.fragments.main.RoutinesFragment
 import net.steamcrafted.materialiconlib.MaterialDrawableBuilder
 import net.steamcrafted.materialiconlib.MaterialIconView
@@ -31,29 +31,22 @@ class RoutineListAdapter(private val routines: List<Routine>, private val parent
         private val routineName: TextView = view.findViewById(R.id.routine_name)
         private val routineDescription: TextView = view.findViewById(R.id.routine_description)
         private val routineIcon: MaterialIconView = view.findViewById(R.id.routine_icon)
-        private val routineCardBackground: LinearLayout = view.findViewById(R.id.card_background)
 
-        //        private val routineSettingsButton: MaterialButton =
-//            view.findViewById(R.id.routine_settings_button)
         private val routineCard: MaterialCardView = view.findViewById(R.id.routine_card)
 
         init {
             routineCard.setOnClickListener(this)
             routineCard.setOnLongClickListener {
                 routineCard.isChecked = !routineCard.isChecked
-//                routineSettingsButton.visibility =
-//                    if (routineCard.isChecked) MaterialButton.INVISIBLE else MaterialButton.VISIBLE
                 true
             }
-//            routineSettingsButton.setOnClickListener {
-//                Toast.makeText(view.context, "settings", Toast.LENGTH_LONG).show()
-//            }
         }
 
         override fun onClick(v: View) {
-            val intent = Intent(view.context, EditIconActivity::class.java).apply {
+            val intent = Intent(view.context, EditRoutineActivity::class.java).apply {
                 putExtra(IntentConstants.EXTRA_ICON_OBJECT, routine.icon)
                 putExtra(IntentConstants.EXTRA_COLOR_OBJECT, routine.color)
+                putExtra(IntentConstants.EXTRA_ROUTINE_NAME_OBJECT, routine.name)
                 putExtra(IntentConstants.EXTRA_ROUTINE_POSITION, adapterPosition)
             }
             parent.startActivityForResult(
@@ -78,7 +71,6 @@ class RoutineListAdapter(private val routines: List<Routine>, private val parent
 
         private fun setForeground(color: Int) {
             @ColorInt val colorInt = view.context.getColorFromAttr(color)
-//            routineSettingsButton.iconTint = ColorStateList.valueOf(colorInt)
             routineName.setTextColor(colorInt)
             routineDescription.setTextColor(colorInt)
             routineIcon.setColor(
@@ -102,9 +94,15 @@ class RoutineListAdapter(private val routines: List<Routine>, private val parent
         holder.bind(routines[position])
     }
 
-    fun onUpdate(position: Int, newColor: Color, newIconValue: MaterialDrawableBuilder.IconValue) {
+    fun onUpdate(
+        position: Int,
+        newColor: Color,
+        newIconValue: MaterialDrawableBuilder.IconValue,
+        newName: String
+    ) {
         routines[position].color = newColor
         routines[position].icon = newIconValue
+        routines[position].name = newName
         notifyItemChanged(position)
     }
 

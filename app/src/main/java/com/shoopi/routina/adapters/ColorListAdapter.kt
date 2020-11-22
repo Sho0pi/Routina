@@ -14,13 +14,13 @@ import net.steamcrafted.materialiconlib.MaterialIconView
 class ColorListAdapter(
     private val colors: List<Color>,
     private val iconView: LinearLayout,
-    private var iconColor: SharedColor
+    private var routineColor: SharedColor
 ) :
     RecyclerView.Adapter<ColorListAdapter.ColorHolder>() {
     class ColorHolder(
         private var view: View,
         private val iconView: LinearLayout,
-        private var iconColor: SharedColor
+        private var routineColor: SharedColor
     ) :
         RecyclerView.ViewHolder(view),
         View.OnClickListener {
@@ -61,13 +61,13 @@ class ColorListAdapter(
         override fun onClick(v: View) {
             check()
             setColor(iconView)
-            iconColor.color = color
+            routineColor.color = color
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ColorHolder {
         val inflatedView = parent.inflate(R.layout.color_choose_item)
-        return ColorHolder(inflatedView, iconView, iconColor)
+        return ColorHolder(inflatedView, iconView, routineColor)
     }
 
     override fun onBindViewHolder(holder: ColorHolder, position: Int) {

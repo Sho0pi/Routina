@@ -55,8 +55,9 @@ class RoutinesFragment : Fragment() {
                 val color = extras.getSerializable(IntentConstants.EXTRA_COLOR_OBJECT) as Color
                 val icon =
                     extras.getSerializable(IntentConstants.EXTRA_ICON_OBJECT) as MaterialDrawableBuilder.IconValue
+                val name = extras.getString(IntentConstants.EXTRA_ROUTINE_NAME_OBJECT, "")
 
-                adapter.onUpdate(position, color, icon)
+                adapter.onUpdate(position, color, icon, name)
             }
         }
     }
